@@ -7,18 +7,27 @@ public class BankAccount {
 
     public BankAccount(){
         accountCount++;
-        savebalance=0;
-        checkingBalance=0;
+//        savebalance=0;
+//        checkingBalance=0;
     }
 
-    public double get_saveBalance(){
-        return savebalance;
+    public double getaccountsAmount(){
+        return accountsAmount;
+    }
+    public  double getaccountCount(){
+        return accountCount;
     }
 
-    public double getcheckingBalance(){
-        return checkingBalance;
 
-    }
+
+    public  double getSavebalance(){
+          return savebalance;
+ }
+
+
+    public  double getCheckingBalance () {
+     return checkingBalance;
+   }
 
     public void deposit(double amount, Boolean checkingaccount){
         if ( checkingaccount ){
@@ -39,7 +48,7 @@ public class BankAccount {
             }else{
 
                 System.out.println(" insufficient funds");
-                return;
+
             }
 
         }else {
@@ -49,7 +58,7 @@ public class BankAccount {
             }else{
 
                 System.out.println(" insufficient funds");
-                return;
+                
             }
 
 
@@ -58,9 +67,8 @@ public class BankAccount {
     }
 
     public void displayAmount (){
-        System.out.println(accountsAmount);
-        System.out.println(checkingBalance);
-        System.out.println(savebalance);
+        System.out.println("Checking:"+checkingBalance);
+        System.out.println("Saving:"+savebalance);
 
 
     }
